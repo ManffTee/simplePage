@@ -1,0 +1,568 @@
+:root {
+    --color-text: #000000;
+    --color-hl: #A59132;
+    --color-ul: #C0C0C0;
+    --color-prim: #FFF;
+    --color-sec-1: #F5F5F5;
+    --color-sec-2: #E4E4E4;
+    --color-sec-3: #919191;
+
+    --color-weather-1: #F5F5F5;
+    --color-weather-2: #B1DDF1;
+
+    --ff-serif-2: 'Lato', 'sans-serif';
+    --ff-serif: 'Open Sans', sans-serif;
+
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    box-sizing: border-box;
+    font-family: var(--ff-serif);
+    color: var(--color-text);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+html, body {
+    scrollbar-width: none;
+    animation: fullSide 2s ease;
+  }
+
+@keyframes fullSide{
+    0%{
+        overflow: hidden;
+    }
+    99%{
+        overflow: hidden;
+    }
+    100%{
+        overflow: auto;
+    }
+}
+
+.bg_loader_wrapper{
+    position: fixed;
+    z-index: 999999;
+    background-color: var(--color-prim);
+    
+    width: 100vw;
+    height: 100vh;
+
+    animation: byebye 2s forwards;
+}
+
+@keyframes byebye{
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        display: none;
+    }
+}
+
+.bg_loader{
+
+    
+    width: 25em;
+    height: 25em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+        
+    overflow:visible;
+
+    .loader_out_circle{
+        animation: stroke_opacity1 2s ease-in-out infinite;
+        stroke-opacity: 0;
+        stroke: var(--color-hl);
+    }
+
+    .loader_in_circle{
+        animation: stroke_opacity2 2s ease-in-out infinite;
+        stroke: var(--color-hl);
+    }
+
+    @keyframes stroke_opacity1{
+        0%  {
+                stroke-opacity:0;
+               
+            }
+        40%{
+                stroke-opacity:1;
+        }
+        
+        50%{
+                stroke-opacity:1;
+                r: 30%;
+            }
+        100%{
+                r:150%;
+                stroke-opacity:0;
+                
+        }
+    }
+
+    @keyframes stroke_opacity2{
+        0%  {
+                stroke-opacity:0;
+               
+            }
+        40%{
+                stroke-opacity:1;
+        }
+        
+        50%{
+                stroke-opacity:1;
+                r: 15%;
+            }
+        100%{
+                r:125%;
+                stroke-opacity:0;
+                
+        }
+        
+    }
+    
+
+    @keyframes opacity_bg{
+        0%  {
+                opacity:0;
+               
+            }
+        100%{
+                opacity:1;
+                
+        }
+    }
+}
+
+header{
+
+}
+
+main{
+    cursor: default;
+    width: 100%;
+}
+
+footer{
+    height: 10em;
+    background-color: grey;
+
+    .credit-section{
+        color: var(--color-sec-2);
+        
+
+        a {
+            text-decoration: none;
+            color: var(--color-sec-2);
+        }
+    }
+}
+
+/*#region first-page*/
+.first-wrapper{
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    background: url(../images/example_images/hintergrund.jpg);
+    
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 96vh;
+    padding: 0px !important;
+    margin-bottom: 8vh;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 80%,
+        50% 100%,
+        0 80%
+    );
+
+    transition: height, clip-path 1s ease;
+}
+
+.clip-path-flat{
+    clip-path: polygon(
+        /*Horizontal Vertikal*/
+        0 0,            /*Oben links*/
+        100% 0%,        /*Oben rechts*/
+        100% 100%,
+        50% 100%,
+        0 100%
+    ) !important;
+
+    filter: blur(5px);
+}
+
+
+.first-wrapper > .box{
+    
+    cursor: pointer;
+    padding-top: 10%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    .headline{
+        font-size: 7em;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: var(--color-hl);
+        opacity: 0.7;
+        transition: opacity, font-size 1s ease;
+    }
+
+    .headline:hover{
+        opacity: 1;
+    }
+
+    .subline{
+        font-size: 2em;
+        text-transform: uppercase;
+        font-weight: 400;
+        opacity: 0.2;
+        transition: opacity, font-size 1s ease;
+    }
+    
+    
+}
+/*#endregion first-page*/
+
+/* #region weather */
+.weather-wrapper{
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    background-color: var(--color-sec-1);
+    opacity: 0.8;
+}
+
+.weather-wrapper > .box{
+    flex: 1 0 21%;
+    margin: 0.5em;
+    cursor: pointer;
+    border-radius: 0.3em;
+    background-image: linear-gradient(var(--color-weather-1), var(--color-weather-2));
+    color: var(--color-text);
+    max-width: 38em;
+    min-width: 20em;
+    min-height: 5em;
+    
+    padding: 1em;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    position: relative;
+   
+    transition: transform 300ms ease;
+}
+
+.weather-wrapper > .box:hover{
+    transform: scale(1.01) rotate(-0.5deg);
+}
+
+.weather-wrapper > .box > .weather-box{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1em;
+    
+
+    .weather-day{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        padding-left: 0.5em;
+        padding-right: .8em;
+        padding-top: 0.2em;
+        width: auto;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        opacity: 0.8;
+        background-color: var(--color-hl); 
+        background: linear-gradient(315deg, transparent 10px, var(--color-hl) 0) bottom right;
+    }
+
+    .weather-svg{
+        width: 30%;
+        min-width: 12em;
+
+        object{
+            object-fit:scale-down;
+            object-position: 50% 50%;
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            
+            .sonne{
+                animation: draw 5.5s ease-in forwards;
+            }
+        }
+    }
+
+    .weather-data{
+        font-family: var(--ff-serif-2);
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        gap: 0em 3em;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+            "temp temp max"
+            "temp temp ."
+            "temp temp min";
+        
+
+        .temp{
+            grid-area: temp;
+            text-align: center;
+
+            .temp-value, .temp-unit{
+                font-weight: 300;
+                font-size: 4.5em;
+                
+                color: var(--color-hl);
+            }
+            
+
+            
+        }
+
+        .min-temp{
+            grid-area: min;
+        }
+
+        .max-temp{
+            grid-area:max ;
+        }
+
+        .niederschlag-temp{
+            grid-area: niederschlag;
+        }
+
+        .feuchtigkeit-temp{
+            grid-area: feuchtigkeit;
+        }
+    }
+}
+
+@keyframes draw{
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+/* #endregion weather */
+
+/* #region graph*/
+.graph-wrapper{
+    background-color: var(--color-sec-2);
+    opacity: 0.8;
+}
+
+.graph-wrapper > .box{
+    flex: 1 0 21%;
+    margin: 0.5em;
+    cursor: pointer;
+    border-radius: 0.3em;
+    background-color: var(--color-prim);
+    padding: 1em;
+    max-width: 25em;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.graph-wrapper > .box > .cycle-form > .cycle-box{
+    position: relative;
+}
+
+.cycle-box > .progressbar{
+    width: 200px;
+    min-height: 200px;
+    fill: none;
+    stroke: #000;
+    transform: rotate(-90deg);
+}
+
+
+.cycle-box > .progressbar > .track{
+    fill: transparent;
+    stroke: var(--color-sec-2);
+    stroke-width: 6px;
+}
+
+.cycle-box > .progressbar > .fortschritt{
+    fill: transparent;
+    stroke: var(--color-hl);
+    stroke-width: 10px;
+    stroke-linecap: round;
+    stroke-dasharray: 600px;
+    animation: circle--animation 1.2s forwards;
+}
+
+.cycle-box > .progressbar > #nr1{
+    --var-prozent: 0.9;
+}
+
+.cycle-box > .progressbar > #nr2{
+    --var-prozent: 0.7;
+}
+
+.cycle-box > .progressbar > #nr3{
+    --var-prozent: 0.3;
+}
+
+.cycle-box > .progressbar > #nr4{
+    --var-prozent: 0.8;
+}
+
+.cycle-box > .value{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--color-sec-3);
+}
+
+.cycle-form > .text{
+    font-size: 22px;
+    text-align: center;
+}
+
+@keyframes circle--animation {
+    0%{
+        stroke-dashoffset: 600px;
+    }
+    
+    100%{
+        stroke-dashoffset: calc(600px - (600px * var(--var-prozent)));;
+    }
+    
+  }
+
+/* #endregion graph*/
+
+/* #region box*/
+.wrapper{
+    width: 100%;
+    padding: 1em;
+    
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.box-wrapper{
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    background-color: var(--color-sec-1);
+    opacity: 0.8;
+}
+
+.box-wrapper > .box {
+    flex: 1 0 24%;
+    margin: 0.5em;
+    cursor: pointer;
+    border-radius: 0.3em;
+    background-color: var(--color-prim);
+    color: var(--color-ul);
+
+    padding: 1em;
+    max-width: 50em;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.box-wrapper > .box-header{
+    font-weight: 800;
+    font-size: 20px;
+    padding-bottom: 0.5em;
+}
+
+.box > .box-header{
+    transition: color 0.75s ease-in;
+}
+
+.box > .box-content{
+    transition: color 1s ease-in-out;
+}
+
+.box:hover > .box-content{
+    color: var(--color-text);
+}
+
+.box:hover > .box-header{
+    color: var(--color-hl);
+}
+
+
+/* #endregion box*/
+
+/*Laptop*/
+@media (max-width: 140em){
+
+    .box-wrapper > .box{
+        flex: 1 0 42%;
+        
+    }
+
+    .graph-wrapper > .box{
+        flex: 1 0 42%;
+    }
+
+}
+
+/*Handy*/
+@media (max-width: 60em){
+    .first-wrapper {
+        height: 50vh;
+    }
+    
+    .first-wrapper > .box >.headline{
+        font-size: 350%;
+    }
+
+    .first-wrapper > .box >.subline{
+        font-size: 200%;
+    }
+
+
+    .box-wrapper, .weather-wrapper{
+        justify-content: center;
+    }
+
+    .box-wrapper > .box{
+        flex: 1 0 100%;
+        max-width: 100%;
+    }
+
+    .graph-wrapper > .box{
+        max-width: 100%;
+    }
+
+}

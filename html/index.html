@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="icon" type="apple-touch-icon" sizes="128x128"  href="../images/facvicon/favicon_128.png">
+    <link rel="icon" type="apple-touch-icon" sizes="256x256" href="../images/facvicon/favicon_256.png">
+    <link rel="icon" type="apple-touch-icon" sizes="512x512" href="../images/facvicon/favicon_512.png">
+    <link rel="icon" type="image/png" sizes="128x128"  href="../images/facvicon/favicon_128.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="../images/facvicon/favicon_256.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../images/facvicon/favicon_512.png">
+    
+    <link rel="stylesheet" href="../css/main.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>just a page</title>
+
+  </head>
+
+  <body>
+
+    <div class="bg_loader_wrapper">
+        <svg class="bg_loader">
+            <circle class="loader_out_circle" r="12.5em" cx="50%" cy="50%" 
+            fill="transparent" stroke-width="9">
+      
+            </circle>
+    
+            <circle class="loader_in_circle" r="10em" cx="50%" cy="50%" 
+            fill="transparent" stroke-width="8">
+                
+            </circle>
+        </svg>
+
+    </div>
+
+
+    <header>
+        <!-- #region nav -->
+        
+        <!-- #endregion nav -->
+    </header>
+
+    <main>
+        <!-- #region frist-page -->
+        <div class="wrapper first-wrapper">
+            <section class="box">
+                <div class="headline">just a page</div>
+                <div class="subline">yes, just a page</div>
+            </section>
+        </div>
+        <!-- #endregion first-page -->
+
+        <!-- #region weather            ✓-->
+        <div class="wrapper weather-wrapper">
+
+            <!-- heute -->
+            <section class="box">
+                <div class="weather-box">
+                    <div class="weather-day">Heute</div>
+                   
+                        <object class="weather-svg" data="../images/svg/sonneWolken.svg" type="image/svg+xml">
+                            <img src="../images/png/003-cloudy.png" alt="Alternatives PNG-Bild">
+                        </object>
+                   
+                    <div class="weather-data">
+                        <div class="temp">
+                            <span class="temp-value">0</span>
+                            <span class="temp-unit">°</span>
+                            <div class="text-weather" ID="test">teilweise bewölkt</div>
+                        </div>
+                        <div class="min-temp">
+                            <span class="temp-value">-1</span>
+                            <span class="temp-unit">°</span>
+                            <div class="text-weather">Min.</div>
+                        </div>
+                        <div class="max-temp">
+                            <span class="temp-value">1</span>
+                            <span class="temp-unit">°</span>
+                            <div class="text-weather">Max.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- morgen -->
+            <section class="box">
+                <div class="weather-box">
+                    <div class="weather-day">Morgen</div>
+                 
+                        <object class="weather-svg" data="../images/svg/sonneWolken.svg" type="image/svg+xml">
+                            <img src="../images/png/003-cloudy.png" alt="Alternatives PNG-Bild">
+                        </object>
+                    
+                    <div class="weather-data">
+                        <div class="temp">
+                            <span class="temp-value">0</span>
+                            <span class="temp-unit">°</span>
+                            <div class="text-weather">teilweise bewölkt</div>
+                        </div>
+                        <div class="min-temp">
+                            <span class="temp-value">-1</span>
+                            <span class="temp-unit">°</span>
+                            <div class="text-weather">Min.</div>
+                        </div>
+                        <div class="max-temp">
+                            <span class="temp-value">1</span>
+                            <span class="temp-unit">°</span>
+                            <div class="text-weather">Max.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- übermorgen -->
+            <section class="box">
+                <div class="weather-box">
+                    <div class="weather-day">Übermorgen</div>
+                
+                        <object class="weather-svg" data="../images/svg/sonneWolken.svg" type="image/svg+xml">
+                            <img src="../images/png/003-cloudy.png" alt="Alternatives PNG-Bild">
+                        </object>
+                   
+                    <div class="weather-data">
+                        <div class="temp">
+                            <span class="temp-value">0</span>
+                            <span class="temp-unit">°</span>
+                            <div class="text-weather">teilweise bewölkt</div>
+                        </div>
+                        <div class="min-temp">
+                            <span class="temp-value">-1</span>
+                            <span class="temp-unit">°</span>
+                            <div class="text-weather">Min.</div>
+                        </div>
+                        <div class="max-temp">
+                            <span class="temp-value">1</span>
+                            <span class="temp-unit">°</span>
+                            <div class="text-weather">Max.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+         
+        </div>
+        <!-- #endregion weather -->
+
+        <!-- #region graph              ✓ -->
+        <div class="wrapper graph-wrapper">
+            <section class="box">
+                <div class="cycle-form">
+                    <div class="cycle-box">
+                        <svg class="progressbar">
+                            <circle class="track" cx="100" cy="100" r="95"></circle>
+                            <circle class="fortschritt" ID="nr1" cx="100" cy="100" r="95"></circle>
+                        </svg>
+                        <span class="value">
+                            90%
+                        </span>
+                    </div>
+                    <div class="text">
+                        Beschreibung
+                    </div>
+                </div>
+            </section>
+            <section class="box">
+                <div class="cycle-form">
+                    <div class="cycle-box">
+                        <svg class="progressbar">
+                            <circle class="track" cx="100" cy="100" r="95"></circle>
+                            <circle class="fortschritt" ID="nr2" cx="100" cy="100" r="95"></circle>
+                        </svg>
+                        <span class="value">
+                            70%
+                        </span>
+                    </div>
+                    <div class="text">
+                        Beschreibung
+                    </div>
+                </div>
+            </section>
+            <section class="box">
+                <div class="cycle-form">
+                    <div class="cycle-box">
+                        <svg class="progressbar">
+                            <circle class="track" cx="100" cy="100" r="95"></circle>
+                            <circle class="fortschritt" ID="nr3" cx="100" cy="100" r="95"></circle>
+                        </svg>
+                        <span class="value">
+                            30%
+                        </span>
+                    </div>
+                    <div class="text">
+                        Beschreibung
+                    </div>
+                </div>
+            </section>
+            <section class="box">
+                <div class="cycle-form">
+                    <div class="cycle-box">
+                        <svg class="progressbar">
+                            <circle class="track" cx="100" cy="100" r="95"></circle>
+                            <circle class="fortschritt" ID="nr4" cx="100" cy="100" r="95"></circle>
+                        </svg>
+                        <span class="value">
+                            80%
+                        </span>
+                    </div>
+                    <div class="text">
+                        Beschreibung
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        <!-- #endregion graph -->
+        
+        <!-- #region boxen              ✓ -->
+        <div class="wrapper box-wrapper">
+            <section class="box">
+
+                <div class="box-header">Box Header Bla Bla</div>
+                <div class="box-content">
+
+                    Liquorice liquorice tart tootsie roll tiramisu biscuit tootsie roll sugar plum. 
+                    Icing toffee pudding cookie bonbon. Bonbon macaroon jelly sweet roll croissant donut gingerbread jujubes caramels. 
+                    Jelly wafer donut. Sweet roll topping caramels candy bear claw gummi bears powder sesame snaps. 
+                    Tart gummies sugar plum pie pastry sesame snaps icing carrot cake jelly. Toffee dessert biscuit. 
+                    Topping brownie cheesecake. Danish cheesecake sesame snaps. 
+                    Danish candy sweet roll wafer macaroon bear claw sweet soufflé chocolate cake. 
+                    Muffin powder chupa chups. Chocolate bar wafer chocolate cake bonbon toffee croissant wafer. 
+                    Dragée bear claw ice cream candy canes dessert.
+                    
+                </div>
+
+            </section>
+
+            <section class="box">
+
+                <div class="box-header">Box Header Bla Bla</div>
+                <div class="box-content">
+
+                    Liquorice liquorice tart tootsie roll tiramisu biscuit tootsie roll sugar plum. 
+                    Icing toffee pudding cookie bonbon. Bonbon macaroon jelly sweet roll croissant donut gingerbread jujubes caramels. 
+                    Jelly wafer donut. Sweet roll topping caramels candy bear claw gummi bears powder sesame snaps. 
+                    Tart gummies sugar plum pie pastry sesame snaps icing carrot cake jelly. Toffee dessert biscuit. 
+                    Topping brownie cheesecake. Danish cheesecake sesame snaps. 
+                    Danish candy sweet roll wafer macaroon bear claw sweet soufflé chocolate cake. 
+                    Muffin powder chupa chups. Chocolate bar wafer chocolate cake bonbon toffee croissant wafer. 
+                    Dragée bear claw ice cream candy canes dessert.
+                    
+                </div>
+
+            </section>
+
+            <section class="box">
+
+                <div class="box-header">Box Header Bla Bla</div>
+                <div class="box-content">
+
+                    Liquorice liquorice tart tootsie roll tiramisu biscuit tootsie roll sugar plum. 
+                    Icing toffee pudding cookie bonbon. Bonbon macaroon jelly sweet roll croissant donut gingerbread jujubes caramels. 
+                    Jelly wafer donut. Sweet roll topping caramels candy bear claw gummi bears powder sesame snaps. 
+                    Tart gummies sugar plum pie pastry sesame snaps icing carrot cake jelly. Toffee dessert biscuit. 
+                    Topping brownie cheesecake. Danish cheesecake sesame snaps. 
+                    Danish candy sweet roll wafer macaroon bear claw sweet soufflé chocolate cake. 
+                    Muffin powder chupa chups. Chocolate bar wafer chocolate cake bonbon toffee croissant wafer. 
+                    Dragée bear claw ice cream candy canes dessert.
+                    
+                </div>
+
+            </section>
+
+            <section class="box">
+
+                <div class="box-header">Box Header Bla Bla</div>
+                <div class="box-content">
+
+                    Liquorice liquorice tart tootsie roll tiramisu biscuit tootsie roll sugar plum. 
+                    Icing toffee pudding cookie bonbon. Bonbon macaroon jelly sweet roll croissant donut gingerbread jujubes caramels. 
+                    Jelly wafer donut. Sweet roll topping caramels candy bear claw gummi bears powder sesame snaps. 
+                    Tart gummies sugar plum pie pastry sesame snaps icing carrot cake jelly. Toffee dessert biscuit. 
+                    Topping brownie cheesecake. Danish cheesecake sesame snaps. 
+                    Danish candy sweet roll wafer macaroon bear claw sweet soufflé chocolate cake. 
+                    Muffin powder chupa chups. Chocolate bar wafer chocolate cake bonbon toffee croissant wafer. 
+                    Dragée bear claw ice cream candy canes dessert.
+                    
+                </div>
+
+            </section>
+        </div>
+        <!-- #endregion boxen -->
+    
+        <!-- #region controls -->
+        
+        <!-- #endregion controls -->
+    </main>
+
+    <footer>
+        <!-- #region footer -->
+        <div class="credit-section">
+            <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+            <a href='https://www.freepik.com/vectors/background'>Background vector created by katemangostar - www.freepik.com</a>
+        </div>
+        <!-- #endregion footer -->
+    </footer>
+
+    <script src="../js/weather_load.js"></script>
+    <script src="../js/animateOnScroll.js"></script>
+
+
+  </body>
+</html>
