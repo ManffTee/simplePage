@@ -68,7 +68,7 @@ html, body {
     }
     100%{
         opacity: 0;
-        z-index: -10000000000000;
+        z-index: -999;
         display: none;
     }
 }
@@ -422,7 +422,8 @@ footer{
     stroke-width: 10px;
     stroke-linecap: round;
     stroke-dasharray: 600px;
-    animation: 2s circle--animation 1.2s forwards;
+    animation:  circle--animation 1.2s forwards;
+    animation-delay: 1s;
 }
 
 .cycle-box > .progressbar > #nr1{
