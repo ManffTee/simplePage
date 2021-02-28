@@ -79,6 +79,7 @@ html, body {
   }
   100% {
     opacity: 0;
+    z-index: -10000000000000;
     display: none;
   }
 }
@@ -89,6 +90,7 @@ html, body {
   }
   100% {
     opacity: 0;
+    z-index: -10000000000000;
     display: none;
   }
 }
